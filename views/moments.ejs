@@ -1,0 +1,151 @@
+<%- include('./Partials/layout.ejs') %>
+
+<div class="container moments">
+    <h1 class="mots-head">Captured Moments</h1>
+    <p class="mots-desc">Sharing the greatest moments with others is always the best thing.</p>
+    <p class="mots-desc1">Find few of our captured moments while serving the happy stomachs and even happier hearts.</p>
+
+    <div class="row mots-row">
+        <div class="column mots-col">
+            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+        </div>
+        <div class="column mots-col">
+            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+        </div>
+        <div class="column mots-col">
+            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(152).jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+        </div>
+    </div>
+    <div class="row mots-row">
+        <div class="column mots-col">
+            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(42).jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+        </div>
+        <div class="column mots-col">
+            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(151).jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+        </div>
+        <div class="column mots-col">
+            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+        </div>
+    </div>
+    <div class="row mots-row">
+            <div class="column mots-col">
+                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(148).jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
+            </div>
+            <div class="column mots-col">
+                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(147).jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
+            </div>
+            <div class="column mots-col">
+                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(149).jpg" onclick="openModal();currentSlide(9)" class="hover-shadow">
+            </div>
+        </div>
+    
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+        
+            <div class="mySlides">
+                <div class="numbertext">1 / 9</div>
+                <img class="mots-img" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">2 / 9</div>
+                <img class="mots-img" src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">3 / 9</div>
+                <img class="mots-img" src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(152).jpg" style="width:100%">
+            </div>
+        
+            <div class="mySlides">
+                <div class="numbertext">4 / 9</div>
+                <img class="mots-img" src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(42).jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 9</div>
+                <img class="mots-img" src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(151).jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">6 / 9</div>
+                <img class="mots-img" src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">7 / 9</div>
+                <img class="mots-img" src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(148).jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">8 / 9</div>
+                <img class="mots-img" src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(147).jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">9 / 9</div>
+                <img class="mots-img" src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(149).jpg" style="width:100%">
+            </div>
+        
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+    </div>
+</div>
+
+<div class="divider-line">
+    <img class="image-divider" src="/images/divider-line.png" alt="">
+  </div>
+
+  <div class="end-quote">
+    <h2 class="first-quote-end">Because we at Paagi Caterers know you don't want to regret saying</h2>
+    <h2 class="second-quote-end">‘Oh! I could have eaten a bit more...’</h2>
+  </div>
+<%- include('./Partials/layoutfooter.ejs') %>
+
+<script>
+        // Open the Modal
+        function openModal() {
+          document.getElementById("myModal").style.display = "block";
+        }
+        
+        // Close the Modal
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+        
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+        //   dots[slideIndex-1].className += " active";
+        //   captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+</script>
